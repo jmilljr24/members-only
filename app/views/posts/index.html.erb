@@ -1,1 +1,12 @@
-<h1><%= current_user %></h1>
+<h1>Posts</h1>
+<%= link_to "Log In", new_user_session_path %>
+<ul>
+  <% @post.each do |post| %>
+    <li>
+      <%= post.body  %>
+      <% if user_signed_in? %>
+      <p> <%= post.user.username.capitalize %></p>
+      <% end%>
+    </li>
+  <% end %>
+</ul>
