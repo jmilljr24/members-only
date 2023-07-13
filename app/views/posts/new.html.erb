@@ -1,0 +1,9 @@
+<%= form_with model: @post do |form| %>
+    <%= form.label :body%>
+    <%= form.text_field :body%> <br>
+    <%= form.submit "Post" %>
+
+    
+<% end %>
+
+<h1><%= current_user.username.capitalize %></h1>
